@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_exchange_edit">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_padding_middle">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/default_padding_half"
+                        android:paddingLeft="@dimen/default_padding_small"
+                        android:paddingRight="@dimen/default_padding_small"
+                        android:paddingTop="@dimen/default_padding_middle">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/default_padding_half">
+
+                            <ImageView
+                                android:id="@+id/ivFromExchangeIcon_FER"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:visibility="invisible"
+                                app:srcCompat="@drawable/ic_bitcoin" />
+
+                            <TextView
+                                android:id="@+id/tvFromExchangeIconInText_FER"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@color/text_color"
+                                android:textSize="26sp"
+                                android:visibility="invisible"
+                                tools:text="USD" />
+                        </FrameLayout>
+
+                        <EditText
+                            android:id="@+id/etFromExchangeValue_FER"
+                            style="@style/ExchangeRateEditStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:text="1.002" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/default_padding_half"
+                        android:paddingLeft="@dimen/default_padding_small"
+                        android:paddingRight="@dimen/default_padding_small"
+                        android:paddingTop="@dimen/default_padding_middle">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/default_padding_half">
+
+                            <ImageView
+                                android:id="@+id/ivToExchangeIcon_FER"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:visibility="invisible"
+                                app:srcCompat="@drawable/ic_bitcoin" />
+
+                            <TextView
+                                android:id="@+id/tvToExchangeIconInText_FER"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@color/text_color"
+                                android:textSize="26sp"
+                                android:visibility="invisible"
+                                tools:text="USD" />
+                        </FrameLayout>
+
+                        <EditText
+                            android:id="@+id/etToExchangeValue_FER"
+                            style="@style/ExchangeRateEditStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:focusable="false"
+                            tools:text="890.22$" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivChangeExchangeSides_FER"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/default_padding_normal"
+                    android:padding="@dimen/default_padding_half"
+                    app:srcCompat="@drawable/ic_change_exchanges" />
+            </FrameLayout>
+        </android.support.v7.widget.CardView>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvExchangeRates_FER"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingBottom="@dimen/default_padding_normal"
+            android:paddingTop="@dimen/default_padding_normal"
+            android:scrollbars="none" />
+
+        <TextView
+            android:id="@+id/tvListEmpty_FER"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/exchange_rates_empty_list"
+            android:textColor="@color/text_color_light"
+            android:visibility="gone" />
+
+    </FrameLayout>
+</LinearLayout>

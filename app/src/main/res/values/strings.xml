@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Blockchain Sample</string>
+    <string name="create_wallet">Create Wallet</string>
+    <string name="exchange_rate">Exchange Rate</string>
+
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="password_confirm">Confirm Password</string>
+
+    <string name="error_field_is_empty">Field is required</string>
+    <string name="error_field_not_valid">Please input valid field</string>
+    <string name="error_field_not_equal_passwords">Passwords do not match</string>
+
+    <string name="wallet_is_created">Wallet created</string>
+    <string name="wallet_creating_error">Error. Could not create wallet</string>
+    <string name="exchange_rate_error">Error. Could not load exchange rates</string>
+    <string name="buy">Buy</string>
+    <string name="sell">Sell</string>
+    <string name="exchange_rates_empty_list">Exchange rates not found</string>
+</resources>

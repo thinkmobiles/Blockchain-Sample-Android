@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        style="@style/ExchangeRateItemStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/default_padding_normal"
+        android:layout_marginEnd="@dimen/default_padding_middle"
+        android:layout_marginStart="@dimen/default_padding_middle"
+        android:layout_marginTop="@dimen/default_padding_normal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_exchange_list_item"
+            android:paddingBottom="@dimen/default_padding_half"
+            android:paddingEnd="@dimen/default_padding_half"
+            android:paddingStart="@dimen/default_padding_middle"
+            android:paddingTop="@dimen/default_padding_half">
+
+            <TextView
+                android:id="@+id/tvExchangeLabel_LIER"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/default_padding_small"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textAllCaps="true"
+                android:textColor="@color/text_color_light"
+                android:textSize="20sp"
+                tools:text="USD" />
+
+            <LinearLayout
+                android:id="@+id/llRateSell_LIER"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/default_padding_small"
+                android:layout_marginStart="@dimen/default_padding_middle"
+                android:gravity="center_horizontal"
+                android:minWidth="90dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sell"
+                    android:textAllCaps="true"
+                    android:textColor="@color/text_color_light" />
+
+                <TextView
+                    android:id="@+id/tvSellValue_LIER"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_padding_small"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textAllCaps="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    tools:text="1,222,433.34" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llRateBuy_LIER"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/default_padding_middle"
+                android:layout_toStartOf="@id/llRateSell_LIER"
+                android:gravity="center_horizontal"
+                android:minWidth="90dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/buy"
+                    android:textAllCaps="true"
+                    android:textColor="@color/text_color_light" />
+
+                <TextView
+                    android:id="@+id/tvBuyValue_LIER"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_padding_small"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textAllCaps="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    tools:text="672.20" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</FrameLayout>

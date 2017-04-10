@@ -1,0 +1,51 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+        <item name="colorButtonNormal">@color/colorPrimary</item>
+    </style>
+
+    <style name="MenuItemContainerStyle">
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingBottom">@dimen/default_padding</item>
+        <item name="android:paddingTop">@dimen/default_padding</item>
+    </style>
+
+    <style name="MenuItemLabelStyle">
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:padding">@dimen/default_padding_small</item>
+        <item name="android:layout_marginTop">@dimen/default_padding_half</item>
+    </style>
+
+    <style name="ExchangeRateEditStyle">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:inputType">numberDecimal</item>
+        <item name="android:background">@drawable/bg_exchange_edit</item>
+        <item name="android:layout_margin">@dimen/default_padding_half</item>
+        <item name="android:maxLength">15</item>
+    </style>
+
+    <style name="ExchangeRateItemStyle.Theme" parent="AppTheme">
+        <item name="colorControlHighlight">#5001A03D</item>
+    </style>
+
+    <style name="ExchangeRateItemStyle">
+        <item name="android:theme">@style/ExchangeRateItemStyle.Theme</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+    </style>
+
+</resources>
